@@ -1,7 +1,7 @@
 <template lang="html">
 
   <section class="character">
-    <h1>character Component</h1>
+    
   </section>
 
 </template>
@@ -15,6 +15,7 @@
     },
     data() {
       return {
+        
 
       }
     },

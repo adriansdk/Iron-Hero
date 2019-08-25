@@ -1,7 +1,9 @@
 <template lang="html">
 
   <section class="stats">
-    <h1>stats Component</h1>
+    <h1>Adrian, a furious warrior</h1>
+    <p> Health:{{hp}} </p>
+    <p> Mana:{{mana}} </p>
   </section>
 
 </template>
@@ -15,6 +17,8 @@
     },
     data() {
       return {
+        hp: 100,
+        mana: 80,
 
       }
     },
