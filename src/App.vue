@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="row screen d-flex">
+      <div class="col-10">
+        <screen></screen>
+        <stats></stats>
+      </div>
+      <div class="col flex-row justify-content-between">
+        <character class="row"></character>
+        <items class="row"></items>
+        <superSayan class="row"></superSayan>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import screen from "./components/screen.vue";
+import equips from "./components/equips.vue";
+import items from "./components/items.vue";
+import stats from "./components/stats.vue";
+import character from "./components/character.vue";
+import superSayan from "./components/superSayan.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld,
-  },
+    screen,
+    equips,
+    items,
+    stats,
+    character,
+    superSayan,
+  }
 };
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 900px;
 }
+
+.screen{
+  height: 100%;
+  width: 100%;
+}
+
 </style>
