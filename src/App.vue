@@ -38,6 +38,7 @@ export default {
 <style>
 #app {
   height: 900px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .screen{
