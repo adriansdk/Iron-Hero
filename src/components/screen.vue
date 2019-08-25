@@ -3,7 +3,7 @@
   <section class="screen" v-on:click="movement()">
     <div class="myContainer">
       <div class="hero" v-bind:style="{ marginLeft: this.yPos + 'px', marginTop: this.xPos + 'px' }">
-        <h1>hero</h1>
+        <h1>I'M A HERO</h1>
       </div>
     </div>
     
