@@ -1,8 +1,8 @@
 <template lang="html">
 
-  <section class="screen">
+  <section class="screen" v-on:keydown.enter="movement(e)">
     <div class="myContainer">
-      <div class="hero" v-bind:style="{movement}">
+      <div class="hero" v-bind:style="{ marginLeft: this.yPos + 'px', marginTop: this.xPos + 'px' }">
         <h1>hero</h1>
       </div>
     </div>
@@ -16,38 +16,42 @@
     name: 'screen',
     props: [],
     mounted() {
-      function movement(e) {
-        if (e.keyCode == 37) {
-          this.xPos -= '5px';
-          //left
-        }else if (e.keyCode == 38){
-          this.yPos -= 5;
-          //up
-        }else if (e.keyCode == 39){
-          this.yPos += 5;
-          //right
-        }else if (e.keyCode == 40){
-          this.xPos -= 5;
-          //down
-          console.log(this.xPos)
-        }
-      }
 
-      document.onkeydown = movement;
+    
 
     },
     data() {
       return {
         screen: document.querySelector('.screen'),
         character: document.querySelector('.hero'),
-        yPos: 5,
-        xPos:5,
+        yPos: 50,
+        xPos: 50,
                 
         }
     },
     methods: {
-      movement:function(e){
-        
+      movement:function(e) {
+        console.log('whatever')
+        if (e.keyCode == 37) {
+          this.xPos -= 5
+          console.log(this.xPos)
+
+          //left
+        }else if (e.keyCode == 38){
+          this.yPos -= 5
+          console.log(this.yPos)
+          //up
+        }else if (e.keyCode == 39){
+          this.yPos += 5
+          console.log(this.yPos)
+          //right
+        }else if (e.keyCode == 40){
+          this.xPos -= 5
+          //down
+          console.log(this.xPos)
+        }
+        return {
+        }
 
       }
       
