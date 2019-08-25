@@ -1,6 +1,6 @@
 <template lang="html">
 
-  <section class="screen" v-on:keydown.enter="movement(e)">
+  <section class="screen" v-on:click="movement()">
     <div class="myContainer">
       <div class="hero" v-bind:style="{ marginLeft: this.yPos + 'px', marginTop: this.xPos + 'px' }">
         <h1>hero</h1>
@@ -30,28 +30,27 @@
         }
     },
     methods: {
-      movement:function(e) {
+      movement:function() {
         console.log('whatever')
-        if (e.keyCode == 37) {
-          this.xPos -= 5
-          console.log(this.xPos)
+        this.yPos += 50
+        // if (e.keyCode == 37) {
+        //   this.xPos -= 5
+        //   console.log(this.xPos)
 
-          //left
-        }else if (e.keyCode == 38){
-          this.yPos -= 5
-          console.log(this.yPos)
-          //up
-        }else if (e.keyCode == 39){
-          this.yPos += 5
-          console.log(this.yPos)
-          //right
-        }else if (e.keyCode == 40){
-          this.xPos -= 5
-          //down
-          console.log(this.xPos)
-        }
-        return {
-        }
+        //   //left
+        // }else if (e.keyCode == 38){
+        //   this.yPos -= 5
+        //   console.log(this.yPos)
+        //   //up
+        // }else if (e.keyCode == 39){
+        //   this.yPos += 5
+        //   console.log(this.yPos)
+        //   //right
+        // }else if (e.keyCode == 40){
+        //   this.xPos -= 5
+        //   //down
+        //   console.log(this.xPos)
+        // }
 
       }
       
